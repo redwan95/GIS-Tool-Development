@@ -1,0 +1,41 @@
+import arcpy
+
+# Input enterprise geodatabase
+input_geodatabase = r"N:\EIAMS\GIS\Project_Map_Docs\IAM_QA_QC_ArcGIS_Pro_Project\GIS_Production@sde2_GIS_VIEWER.sde"
+
+# List of feature classes to buffer
+feature_classes = [
+    "PRODUCTION.IT.Baffle",
+    "PRODUCTION.IT.Boat_Ramp",
+    "PRODUCTION.IT.Bridge_Pedestrian",
+    "PRODUCTION.IT.Bridge_Vehicular",
+    "PRODUCTION.IT.Bullet_Trap",
+    "PRODUCTION.IT.Dam",
+    "PRODUCTION.IT.Firing_Line",
+    "PRODUCTION.IT.Fishing_and_Boating_Access_Structures",
+    "PRODUCTION.IT.Gate",
+    "PRODUCTION.IT.Grade_Control_Structure",
+    "PRODUCTION.IT.Junction_Box",
+    "PRODUCTION.IT.Levee_Spillway_Wetland",
+    "PRODUCTION.IT.Manhole_Wastewater",
+    "PRODUCTION.IT.Protective_Structure",
+    "PRODUCTION.IT.Pump_Structure_Flood",
+    "PRODUCTION.IT.Pump_Structure_Non_Potable_Water_Exterior",
+    "PRODUCTION.IT.Pump_Structure_Wastewater",
+    "PRODUCTION.IT.Stairs_Pedestrian_Access",
+    "PRODUCTION.IT.Storm_Water_Inlet",
+    "PRODUCTION.IT.Valve_Structure",
+    "PRODUCTION.IT.Water_Control_Structure_Flood",
+    "PRODUCTION.IT.Water_Control_Structure_Non_Potable_Water",
+    "PRODUCTION.IT.Water_Control_Structure_Wastewater",
+]
+
+# Output geodatabase
+output_geodatabase = r"N:\EIAMS\GIS\Project_Map_Docs\Infrastructure_Flood_Analysis\MyProject12\MyProject12.gdb"
+
+# Buffer distance
+buffer_distance = "5 Meters"
+
+# Enable overwriting outputs
+arcpy.env.workspace = input_geodatabase
+arcpy.env.overwriteOutput = True
