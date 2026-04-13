@@ -1,0 +1,136 @@
+# 🛠️ DWG → GDB Digitization Tool (User Guide)
+
+## 🎯 What This Tool Does
+This tool helps you convert **AutoCAD (.DWG) files** into **GIS feature classes** in ArcGIS Pro.
+
+You can:
+- 📄 Export the **entire DWG (all polylines)**
+- 📦 Export a **specific CAD layer with original attributes**
+- 🚀 Convert CAD data into a **standard GIS schema (SDE template)**
+
+---
+
+## 🧑‍💻 Who Can Use This?
+✔ Non-technical users  
+✔ CAD designers  
+✔ GIS beginners  
+✔ Anyone working with DWG files  
+
+---
+
+## 📝 Inputs You Need to Provide
+
+### 1️⃣ Project Number
+- Example: `86-12-12` or `86121200`
+- Used to create a temporary working geodatabase
+
+---
+
+### 2️⃣ DWG Folder
+- Folder where your `.dwg` files are stored
+- Example:
+    
+
+---
+
+### 3️⃣ Select DWG File
+- Choose your CAD file from dropdown
+
+---
+
+### 4️⃣ Feature Type
+- Example: Polyline, Point, Polygon
+- Usually: **Polyline**
+
+---
+
+### 5️⃣ CAD Layer
+- Select a specific layer (e.g., WATER, ROAD, etc.)
+- OR choose:
+- **ALL LAYERS** (exports everything)
+
+---
+
+### 6️⃣ Output GDB
+- Where the GIS data will be saved
+- Auto-filled if you click:
+👉 **📦 Create Temp GDB**
+
+---
+
+### 7️⃣ Output Feature Class Name
+- Name of your output layer
+- Example:
+    
+
+---
+
+## ⚡ Actions You Can Perform
+
+### 📄 Export Full DWG (EASIEST)
+✔ One-click solution  
+✔ No need to select layer or schema  
+✔ Exports ALL polylines  
+
+👉 Use this if:
+- You want **everything from the DWG**
+- You don’t need schema mapping
+
+---
+
+### 📦 Export Raw Layer
+✔ Exports selected CAD layer  
+✔ Keeps original DWG attributes  
+
+👉 Use this if:
+- You want **specific layers only**
+- You need CAD attributes like Layer, Color, etc.
+
+---
+
+### 🚀 Digitize (Schema)
+✔ Converts CAD → GIS schema  
+✔ Matches SDE database structure  
+
+👉 Use this if:
+- You are preparing **production GIS data**
+- You need **standardized fields**
+
+---
+
+## 🔁 Simple Workflow (Recommended)
+
+1. Enter **Project Number**
+2. Click **📦 Create Temp GDB**
+3. Select **DWG File**
+4. Choose **📄 Export Full DWG** (quickest)
+
+---
+
+## 💡 Tips
+
+- ✔ Use **Export Full DWG** for fastest results  
+- ✔ Use **Raw Layer** for layer-specific extraction  
+- ✔ Use **Digitize (Schema)** for final GIS datasets  
+- ✔ Check preview before running  
+
+---
+
+## ⚠️ Common Issues
+
+- ❌ No features found → Check layer selection  
+- ❌ SDE not loading → Click “Reload SDE”  
+- ❌ Output GDB missing → Create Temp GDB  
+
+---
+
+## ✅ Output
+
+You will get:
+- A feature class inside your GDB
+- GIS-ready data
+- Optional map layer (if enabled)
+
+---
+
+👉 You’re ready to use the tool!
